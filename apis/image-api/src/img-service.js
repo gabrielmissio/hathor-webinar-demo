@@ -16,7 +16,7 @@ async function generateImg (prompt) {
       console.log(error.message)
     }
 
-    throw error
+    throw new Error('Error generating image')
   }
 }
 
