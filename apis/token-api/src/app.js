@@ -10,10 +10,10 @@ const { PORT } = process.env
 
 app.post('/create-nft', async (req, res) => {
   try {
-    const { amount, symbol, name, metadata } = req.body
+    const { address, amount, symbol, name, metadata } = req.body
     if (!amount || !symbol || !name || !metadata) return res.status(400).json({ error: 'missing required fields' })
 
-    const data = await mintNFT({ amount, symbol, name, metadata })
+    const data = await mintNFT({ amount, symbol, name, metadata, address })
 
     return res.status(200).json(data)
   } catch (error) {
