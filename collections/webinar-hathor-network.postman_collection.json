@@ -1,0 +1,275 @@
+{
+	"info": {
+		"_postman_id": "2541c117-a4b8-4712-8479-50b4206685e6",
+		"name": "webinar-hathor-network",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "image-api",
+			"item": [
+				{
+					"name": "generate-image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"prompt\": \"Create a visually captivating image for an NFT collection that symbolizes the interconnectedness of blockchain, Hathor, and the guiding nature of a compass.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/generate-image",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"generate-image"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "token-api",
+			"item": [
+				{
+					"name": "create-nft",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address\": \"WZV4xp3AVJpfxGcm3tyKfLq3Wwdw4NQg3M\",\n    \"amount\": 1,\n    \"symbol\": \"MyNFT\",\n    \"name\": \"Webinar Hathor Network\",\n    \"metadata\": {\n        \"name\": \"{{$guid}}\",\n        \"description\": \"{{$randomLoremSentence}}\",\n        \"attributes\": [\n            {\n                \"type\": \"webinar\",\n                \"value\": \"hathor network\"\n            }\n        ]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/create-nft",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"create-nft"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "headless-hathor-wallet",
+			"item": [
+				{
+					"name": "start-wallet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"wallet-id\": \"wallet-id\",\n    \"seed\": \"<24_words_seed_phrase_string>\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/start",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"start"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "stop-wallet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-wallet-id",
+								"value": "wallet-id",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/wallet/stop",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"wallet",
+								"stop"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-address",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-wallet-id",
+								"value": "wallet-id",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/wallet/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"wallet",
+								"address"
+							],
+							"query": [
+								{
+									"key": "mark_as_used",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "index",
+									"value": "10",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-balance",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-wallet-id",
+								"value": "wallet-id",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/wallet/balance",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"wallet",
+								"balance"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-nft",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-wallet-id",
+								"value": "wallet-id",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Test Coin\",\n    \"symbol\": \"TSC\",\n    \"amount\": 10,\n    \"data\": \"ipfs://ipfs/myNFTHash/filename\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/wallet/create-nft",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"wallet",
+								"create-nft"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "simple-send-tx",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-wallet-id",
+								"value": "wallet-id",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address\": \"WZV4xp3AVJpfxGcm3tyKfLq3Wwdw4NQg3M\",\n    \"value\": 100,\n    \"token\": \"001b2ca3346cb5633bd8eef647bdcc8aa6c429ff00e55be0c5e25050f200668b\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/wallet/simple-send-tx",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"wallet",
+								"simple-send-tx"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
