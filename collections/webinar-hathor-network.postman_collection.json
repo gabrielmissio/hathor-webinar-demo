@@ -81,7 +81,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"wallet-id\": \"wallet-id\",\n    \"seed\": \"<24_words_seed_phrase_string>\"\n}",
+							"raw": "{\n    \"wallet-id\": \"wallet-id\",\n    \"seedKey\": \"default\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
