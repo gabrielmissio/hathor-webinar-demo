@@ -8,7 +8,7 @@ The Token API exposes an endpoint for creating NFTs. It follows a multi-step pro
 To set up the Token API, follow the instructions below:
 
 1. Create a `.env` file:
-   - Make a copy of the `.demo.env` file in the root directory and rename it to `.env`.
+   - Make a copy of the `.demo.env` file in the `apis/token-api` directory and rename it to `.env`.
    - Open the `.env` file and replace the placeholders with the necessary values.
 
 2. Install dependencies:

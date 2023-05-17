@@ -31,13 +31,13 @@ Feel free to explore each folder for more detailed information.
 To set up the project locally, follow these steps:
 
 1. Run the Hathor Headless Wallet and start a wallet.
-   - Instructions to start the Headless Hathor Wallet API can be found in the `scripts` folder.
+   - Instructions to start the Headless Hathor Wallet API can be found in the `scripts` directory.
 
 2. Run the Image API.
-   - Instructions to start the Image API can be found in the `apis/image-api` folder.
+   - Instructions to start the Image API can be found in the `apis/image-api` directory.
 
 3. Run the Token API.
-   - Instructions to start the Token API can be found in the `apis/token-api` folder.
+   - Instructions to start the Token API can be found in the `apis/token-api` directory.
 
 Once the above steps are completed, you will be able to create NFTs with images based on their metadata description.
 
