@@ -31,7 +31,6 @@ Feel free to explore each folder for more detailed information.
 To set up the project locally, follow these steps:
 
 1. Run the Hathor Headless Wallet and start a wallet.
-   - Use the scripts provided in the `scripts` folder to set up the Hathor Wallet Headless using Docker.
    - Instructions to start the Headless Hathor Wallet API can be found in the `scripts` folder.
 
 2. Run the Image API.
