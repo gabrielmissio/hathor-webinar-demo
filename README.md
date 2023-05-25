@@ -1,6 +1,6 @@
-# Webinar Hathor Network
+# Hathor Webinar Demo
 
-This repository contains the showcase application presented in the 'Hathor Network' webinar. The application consists of two APIs: an Image API that generates images from prompts using OpenAI, and a Token API that creates NFTs by calling the Image API, uploading images to IPFS, and utilizing the Headless Hathor Wallet API.
+This repository showcases the application presented in the 'Hathor Network' webinar. The application comprises two APIs: an Image API that utilizes OpenAI to generate images based on prompts, and a Token API that leverages the Image API, uploads images to IPFS, and utilizes the Headless Hathor Wallet API to create NFTs.
 
 ## Prerequisites
 
